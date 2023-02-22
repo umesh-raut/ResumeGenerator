@@ -1,0 +1,82 @@
+/* utility css */
+.underline{
+    text-decoration: underline;
+    font-family: cursive;
+}
+/* generate btn */
+.Gbtn{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #131414;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.Gbtn::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: #fff;
+    opacity: 0.4;
+    transition: height 0.2s ease-in-out;
+}
+.Gbtn:hover::before {
+    height: 100%;
+  }
+.Gbtn::after{
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: rotate(45deg);
+    transition: all 0.5s ease-in-out;
+  
+}  
+.Gbtn:hover::after{
+    top: -10%;
+    left: -10%;
+    opacity: 0;
+}
+/* add btns */
+#Abtn{
+    background-color: transparent;
+  border: 1px solid #333;
+  color: #333;
+  padding: 10px 20px;
+  font-size: 12px;
+  transition: all 0.3s ease;
+}
+#Abtn:hover {
+    background-color: #333;
+    color: #fff;
+    border-color: #fff;
+  }
+.cinfo{
+    padding: 25px;
+    border-radius: 25px; 
+    box-shadow: 0 13px 17px rgb(0 0 0 / 153%);
+}
+/* template 1 desion css */
+#resume-template{
+    display: none;
+}
+.pimg{
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 150px;
+
+}
+.background{
+background-color: aquamarine;
+}
+

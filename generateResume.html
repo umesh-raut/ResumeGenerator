@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-WJUUqfoMmnfkBLne5uxXj+na/c7sesSJ32gI7GfCk4zO4GthUKhSEGyvQ839BC51" crossorigin="anonymous">
+    <link rel="stylesheet" href="GenerateResume.css">
+    <title>Resume Generator</title>
+</head>
+
+<body>
+    <div class="container" id="resume">
+        <h1 class="text-center my-4 underline">Resume Generator</h1>
+        <p class="text-center my-2"><i><b>build your resume by filling details below</b></i></p>
+        <div class="row">
+            <div class="col-md-9 my-4 cinfo">
+                <h4 class="text-center"><i>Enter your details</i></h4>
+                <div class="form-group my-2">
+                    <label for="nameField">Firstname||Lastname</label>
+                    <input type="text" class="form-control"  autofocus id="nameField" placeholder="Enter your name">
+
+                </div>
+                <div class="form-group my-2">
+                    <label for="contactField">Phone Number</label>
+                    <input type="number" class="form-control" id="contactField" placeholder="enter your number">
+
+                </div>
+                <div class="form-group my-2">
+                    <label for="addressField">Address</label>
+                    <textarea class="form-control" name="addressField" id="addressField" cols="30" rows="2"
+                        placeholder="Enter your permanent and temporary address"></textarea>
+                </div>
+                <div class="form-group my-2">
+                    <label for="emailField">Email Address</label>
+                    <input type="email" class="form-control" id="emailField" placeholder="enter your Email">
+
+                </div>
+                <div class="form-group my-2">
+                    <label for="summaryField">Objective</label>
+                    <textarea class="form-control" name="summaryField" id="summaryField"
+                        placeholder="Enter a brief description of your professional bakground.Also share your goals in life"></textarea>
+                </div>
+                <div class="form-group my-2" id="xp">
+                    <label for="experienceField">Work Experience</label>
+                    <textarea class="form-control xpField" autofocus name="experienceField" id="experienceField" cols="30"
+                        rows="3" placeholder="Company Name and Location
+                   Job Title|Start-End Date
+                   Enter details about what you did in your previous job including your achievements"></textarea>
+                    <!-- new textarea generated usimng js -->
+                    <div class="container text-center mt-2" id="xpAddButton">
+                        <button class="btn btn-dark btn-sm my-3" id="Abtn"onclick="addXpField()">Add</button>
+                    </div>
+                </div>
+                <div class="form-group my-2" id="Edu">
+                    <label for="">Academic Qualification</label>
+                    <textarea class="form-control eduField" autofocus  cols="30" rows="3"
+                        placeholder="School|college Name
+                   Field of Study|Compeletion Date
+                   Include all your academic achievement"></textarea>
+                    <!-- new textarea generated usimng js -->
+                    <div class="container text-center mt-2" id="addEduButton"><button class="btn btn-dark btn-sm my-3" id="Abtn"
+                            onclick="addEduField()">Add</button></div>
+                </div>
+            </div>
+            <div class="col-md-3 my-4">
+               <div class="cinfo">
+                <h4 >choose tempelate</h4>
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis dolore ducimus molestias,
+                        consequatur ipsa adipisci distinctio culpa perferendis reprehenderit sequi.</p>
+                </div>
+               </div>
+                <div class="container text-center mt-10 my-6" style="margin: 78px 0px;">
+                    <button class="Gbtn" onclick="generateCv()">Generate Resume</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="resume-template">
+        <div class="row">
+            <div class="col-md-4 text-center my2 py-4 background">
+                <!-- first column -->
+                <img src="https://t3.ftcdn.net/jpg/02/10/49/86/360_F_210498655_ywivjjUe6cgyt52n4BxktRgDCfFg8lKx.jpg"
+                    class="img-fluid pimg" alt="">
+                <div class="container">
+                    <p id="nameT">Fname lname</p>
+                    <p id="phoneT">9876656765</p>
+                    <p id="addressT">address</p>
+                    <p id="emailT">email</p>
+                </div>
+            </div>
+            <div class="col-md-8 py-6">
+                <h1 class="text-center" style="font-weight: 700;" id="nameT2">Firstname| Lastname</h1>
+                <h5 class="text-center" id="phoneT2"><i>phone:9846487589</i></h5>
+                <!-- objective card -->
+                <div class="card mt-2">
+                    <div class="card-header background">
+                        <h3>Summary|objective</h3>
+                    </div>
+                    <div class="card-body" id="objectiveT">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime nisi a veritatis porro minima
+                        fugiat. Molestias explicabo atque blanditiis dolore voluptatum. Quo hic dolorum accusamus
+                        excepturi ab sequi similique eveniet.
+                    </div>
+                </div>
+                <div class="card mt-5">
+                    <div class="card-header background">
+                        <h3>Academic Qualification</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="eduT">
+                            <li>Lorem ipsum dolor sit amet.</li>
+
+
+                            <li>Lorem ipsum dolor sit amet.</li>
+
+
+                            <li>Lorem ipsum dolor sit amet.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card mt-5">
+                    <div class="card-header background">
+                        <h3>Work Experience</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="xpT">
+                            <li>Lorem ipsum dolor sit amet.</li>
+
+
+                            <li>Lorem ipsum dolor sit amet.</li>
+
+
+                            <li>Lorem ipsum dolor sit amet.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container mt-5 text-center">
+                    <button class="btn btn-primary" onclick="printCv()">Print Resume</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- js scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="resume.js"></script>
+</body>
+
+</html>
